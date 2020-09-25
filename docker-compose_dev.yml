@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+    api:
+        build:
+            dockerfile: Dockerfile.dev
+            context: ./app
+        image:
+            'nikhiltiru/py_backend_sandbox:${TAG}'
+        env_file:
+            - .env
+        environment:
+            - TEST_ENV=test
+        volumes:
+            - ${PWD}/app:/usr/src/app
+        ports:
+            - ${HOST_PORT}:${CONT_PORT}
+        expose:
+            - ${HOST_PORT}
