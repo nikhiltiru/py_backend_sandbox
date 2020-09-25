@@ -2,6 +2,7 @@
 from app import returnBackwardsString
 import unittest
 
+
 class TestApp(unittest.TestCase):
     """Unit tests defined for app.py"""
 
@@ -11,6 +12,6 @@ class TestApp(unittest.TestCase):
         random_string_reversed = "gnirts tset ym si sihT"
         self.assertEqual(random_string_reversed, returnBackwardsString(random_string))
 
+
 if __name__ == "__main__":
     unittest.main()
-

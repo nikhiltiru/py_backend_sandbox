@@ -3,10 +3,12 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+
 @app.get("/")
 def root():
     ''' Welcome message '''
     return "Welcome to Demo Ray"
+
 
 @app.get("/{random_string}")
 def returnBackwardsString(random_string):
