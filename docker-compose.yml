@@ -12,5 +12,5 @@ services:
             - TEST_ENV=test
         ports:
             - ${HOST_PORT}:${CONT_PORT}
-        expose:
-            - ${HOST_PORT}
+        # expose:
+        #     - ${HOST_PORT}
