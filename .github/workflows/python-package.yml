@@ -30,8 +30,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
+        python3 -m pip install --upgrade pip
+        python3 -m pip install flake8 pytest
         if [ -f app/requirements.txt ]; then pip install -r app/requirements.txt; fi
     - name: Lint with flake8
       run: |
@@ -86,8 +86,8 @@ jobs:
         
       - name: Test aws eb cli
         run: |
-            python -V
-            python -m pip install --upgrade awsebcli
+            python3 -V
+            python3 -m pip install --upgrade awsebcli
             eb init -p docker test1-env
             eb deploy
           
