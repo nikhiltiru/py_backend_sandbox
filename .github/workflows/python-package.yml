@@ -86,7 +86,7 @@ jobs:
         
       - name: Test aws eb cli
         run: |
-            apt install -y python3-setuptools
+            sudo apt install -y python3-setuptools
             python3 -V
             python3 -m pip install --upgrade awsebcli
             eb init -p docker test1-env
