@@ -12,7 +12,7 @@ env:
   IMAGE_NAME                : nikhiltiru/py_backend_sandbox
   EB_PACKAGE_S3_BUCKET_NAME : "py-backend-sandbox"
   EB_APPLICATION_NAME       : "py_backend_sandbox"
-  EB_ENVIRONMENT_NAME       : "PyBackendSandbox-env"
+  EB_ENVIRONMENT_NAME       : "py-backend-sandbox-env"
   DEPLOY_PACKAGE_NAME       : "py_backend_sandbox-${{ github.sha }}.zip"
   AWS_REGION_NAME           : "us-east-2"
 
@@ -68,7 +68,7 @@ jobs:
           context: ./app
           file: ./app/Dockerfile
           push: true
-          tags: nikhiltiru/py_backend_sandbox:latest
+          tags: nikhiltiru/py_backend_sandbox:${{ github.sha }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
