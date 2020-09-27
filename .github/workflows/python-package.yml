@@ -10,7 +10,7 @@ on:
 env:
   # TODO: Change variable to your image's name.
   IMAGE_NAME                : nikhiltiru/py_backend_sandbox
-  EB_PACKAGE_S3_BUCKET_NAME : "py_backend_sandbox"
+  EB_PACKAGE_S3_BUCKET_NAME : "py-backend-sandbox"
   EB_APPLICATION_NAME       : "py_backend_sandbox"
   EB_ENVIRONMENT_NAME       : "PyBackendSandbox-env"
   DEPLOY_PACKAGE_NAME       : "py_backend_sandbox-${{ github.sha }}.zip"
